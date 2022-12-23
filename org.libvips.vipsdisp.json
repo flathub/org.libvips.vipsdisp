@@ -22,7 +22,6 @@
         "/lib/cmake",
         "/lib/openjpeg-*",
         "/lib/libhdf5.settings",
-        "/lib/debug",
         "/man",
         "/share/aclocal",
         "/share/doc",
