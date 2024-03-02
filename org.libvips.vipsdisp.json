@@ -1,7 +1,7 @@
 {
     "app-id" : "org.libvips.vipsdisp",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "44",
+    "runtime-version" : "45",
     "sdk" : "org.gnome.Sdk",
     "command" : "vipsdisp",
     "finish-args" : [
@@ -86,8 +86,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/libjxl/libjxl.git",
-                    "tag" : "v0.8.1",
-                    "commit" : "c27d499263435ac77007174e0f1cf54557cff23a"
+                    "tag" : "v0.10.1",
+                    "commit" : "5f67ebced96df5c0696ec7d1822bdd3e4e11a1a1"
                 }
             ]
         },
@@ -367,7 +367,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/libvips/libvips.git",
-                    "commit" : "baf3ac9b6151c961be00ff3c6cf8ad06b0305d31"
+                    "commit" : "db9c535a4a8d56bab564e12f7bc14db88e82a6f9"
                 }
             ]
         },
@@ -383,7 +383,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/jcupitt/vipsdisp.git",
-                    "tag" : "v2.6.3c"
+                    "tag" : "v3.0.2"
                 }
             ]
         }
