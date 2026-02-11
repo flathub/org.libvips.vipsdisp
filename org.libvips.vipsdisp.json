@@ -109,28 +109,6 @@
     "modules" : [
 
         {
-            "name" : "highway",
-            "builddir" : true,
-            "buildsystem" : "cmake-ninja",
-            "build-options" : {
-                "config-opts" : [
-                    "-DCMAKE_INSTALL_LIBDIR=lib",
-                    "-DBUILD_TESTING=OFF",
-                    "-DHWY_ENABLE_CONTRIB=OFF",
-                    "-DHWY_ENABLE_EXAMPLES=OFF",
-                    "-DHWY_ENABLE_TESTS=OFF"
-                ]
-            },
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://github.com/google/highway.git",
-                    "tag" : "1.2.0"
-                }
-            ]
-        },
-
-        {
             "name" : "libdeflate",
             "builddir" : true,
             "buildsystem" : "cmake-ninja",
@@ -147,51 +125,7 @@
                 }
             ]
         },
-
-        {
-            "name" : "libjxl",
-            "builddir" : true,
-            "buildsystem" : "cmake-ninja",
-            "build-options" : {
-                "config-opts" : [
-                    "-DCMAKE_INSTALL_LIBDIR=lib",
-                    "-DBUILD_TESTING=OFF",
-                    "-DJPEGXL_ENABLE_SKCMS=off",
-                    "-DJPEGXL_ENABLE_DOXYGEN=off",
-                    "-DJPEGXL_ENABLE_EXAMPLES=off",
-                    "-DJPEGXL_ENABLE_JNI=off",
-                    "-DJPEGXL_ENABLE_MANPAGES=off",
-                    "-DJPEGXL_ENABLE_OPENEXR=off",
-                    "-DJPEGXL_ENABLE_TOOLS=off"
-                ]
-            },
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://github.com/libjxl/libjxl.git",
-                    "tag" : "v0.11.1"
-                }
-            ]
-        },
-
-        {
-            "name" : "openjpeg",
-            "builddir" : true,
-            "buildsystem" : "cmake-ninja",
-            "build-options" : {
-                "config-opts" : [
-                    "-DCMAKE_INSTALL_LIBDIR=lib"
-                ]
-            },
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://github.com/uclouvain/openjpeg.git",
-                    "tag" : "v2.5.3"
-                }
-            ]
-        },
-
+        
         {
             "name" : "libimagequant",
             "builddir" : true,
@@ -231,24 +165,6 @@
                     "type" : "git",
                     "url" : "https://github.com/randy408/libspng.git",
                     "tag" : "v0.7.4"
-                }
-            ]
-        },
-
-        {
-            "name" : "libarchive",
-            "builddir" : true,
-            "buildsystem" : "cmake-ninja",
-            "build-options" : {
-                "config-opts" : [
-                    "-DCMAKE_INSTALL_LIBDIR=lib"
-                ]
-            },
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://github.com/libarchive/libarchive.git",
-                    "tag" : "v3.8.1"
                 }
             ]
         },
