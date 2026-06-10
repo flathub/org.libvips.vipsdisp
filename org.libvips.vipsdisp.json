@@ -120,8 +120,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/aous72/OpenJPH.git",
-                    "tag" : "0.26.0",
-                    "commit" : "4d4f4e8b7f00d877d6a615a991b48ad08a640990"
+                    "tag" : "0.26.3",
+                    "commit" : "cb6592af91fc1332d5381288c1b885372926c447"
                 }
             ]
         },
@@ -188,9 +188,9 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://poppler.freedesktop.org/poppler-25.06.0.tar.xz",
+                    "url" : "https://poppler.freedesktop.org/poppler-26.03.0.tar.xz",
 
-                    "sha256" : "8199532d38984fab46dbd0020ec9c40f20e928e33e9b4cc6043572603a821d83"
+                    "sha256" : "8b3c5e2a9f2ab4c3ec5029f28af1b433c6b71f0d1e7b3997aa561cf1c0ca4ebe"
                 }
             ]
         },
@@ -227,8 +227,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/AcademySoftwareFoundation/openexr.git",
-                    "tag" : "v3.4.4",
-                    "commit" : "741ecb82ccdb291ce5b04713fc6c03208753575e"
+                    "tag" : "v3.4.8",
+                    "commit" : "adbd2a588b47b1f6d02557571d8e36a91084da8a"
                 }
             ]
         },
@@ -258,7 +258,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/google/libultrahdr.git",
-                    "commit" : "5ed39d67cd31d254e84ebf76b03d4b7bcc12e2f7"
+                    "commit" : "8cbc983d2f6c2171af5cbcdb8801102f83fe92ab"
                 }
             ]
         },
@@ -273,7 +273,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/troydhanson/uthash.git",
-                    "commit" : "ca98384ce7f30beb216f9a0bc88a3b4340ead729"
+                    "commit" : "6d8573997c21f24c7e4ec9e48734b44f384170a1"
                 }
             ]
         },
@@ -291,8 +291,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ImagingDataCommons/libdicom.git",
-                    "tag" : "v1.2.0",
-                    "commit" : "de8c1bbbdcb013948bc690b7024297ea9b61c2df"
+                    "tag" : "v1.3.0",
+                    "commit" : "8c84fdbef433395619f3b099e939d36877a9d48f"
                 }
             ]
         },
@@ -308,8 +308,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://github.com/openslide/openslide/releases/download/v4.0.0/openslide-4.0.0.tar.xz",
-                    "sha256" : "cc227c44316abb65fb28f1c967706eb7254f91dbfab31e9ae6a48db6cf4ae562"
+                    "url" : "https://github.com/openslide/openslide/releases/download/v4.0.1/openslide-4.0.1.tar.xz",
+                    "sha256" : "df82f6b264f98d11eeb80d85bbb10c7935fcd69c7abae1d610ce49b9a0437faf"
                 }
             ]
         },
@@ -340,8 +340,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/dloebl/cgif.git",
-                    "tag" : "v0.5.1",
-                    "commit" : "f54941864e8976dc73987e2eccadf2436a172a95"
+                    "tag" : "v0.5.2",
+                    "commit" : "48d28fe9f8c3a344b688bb10274447b6bb1bf0c2"
                 }
             ]
         },
@@ -360,28 +360,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://www.libraw.org/data/LibRaw-0.21.4.tar.gz",
-                    "sha256" : "6be43f19397e43214ff56aab056bf3ff4925ca14012ce5a1538a172406a09e63"
-                }
-            ]
-        },
-
-        {
-            "name" : "libultrahdr",
-            "builddir" : true,
-            "buildsystem" : "cmake-ninja",
-            "build-options" : {
-                "config-opts" : [
-                    "-DCMAKE_INSTALL_LIBDIR=lib",
-                    "-DUHDR_BUILD_EXAMPLES=FALSE",
-                    "-DUHDR_MAX_DIMENSION=65500"
-                ]
-            },
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://github.com/google/libultrahdr.git",
-                    "commit" : "8cbc983d2f6c2171af5cbcdb8801102f83fe92ab"
+                    "url" : "https://www.libraw.org/data/LibRaw-0.22.1.tar.gz",
+                    "sha256" : "a789dc4e2409e2901d93793a4e0b80c7b49d0d97cf6ad71c850eb7616acfd786"
                 }
             ]
         },
@@ -394,8 +374,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ImageMagick/ImageMagick",
-                    "tag" : "7.1.2-13",
-                    "commit" : "dd991e286b96918917a3392d6dc3ffc0e6907a4e"
+                    "tag" : "7.1.2-18",
+                    "commit" : "d4e4b2b35a573fb7d96bc64ff1a417415bbe0f4c"
                 }
             ]
         },
@@ -406,18 +386,17 @@
             "buildsystem" : "meson",
             "config-opts" : [
                 "--libdir=lib",
-                "-Ddeprecated=false",
                 "-Dmodules=disabled"
             ],
             "sources" : [
                 {
                     "type" : "git",
                     "url" : "https://github.com/libvips/libvips.git",
-                    "tag" : "v8.18.2",
-                    "commit" : "17ad2f62dda7e39985955da189183e594683d45e"
+                    "commit" : "78d0831539ae8902082331f8f6265733715cc842"
                 }
             ]
         },
+
 
         {
             "name" : "vipsdisp",
