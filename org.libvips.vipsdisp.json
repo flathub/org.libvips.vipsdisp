@@ -1,7 +1,7 @@
 {
     "app-id" : "org.libvips.vipsdisp",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "50",
+    "runtime-version" : "51",
     "sdk" : "org.gnome.Sdk",
     "command" : "vipsdisp",
     "finish-args" : [
@@ -11,9 +11,7 @@
         "--socket=wayland",
         "--talk-name=org.gtk.vfs.*",
         "--filesystem=xdg-run/gvfsd",
-        "--filesystem=home",
-        "--filesystem=/mnt",
-        "--filesystem=/srv"
+        "--filesystem=host"
     ],
     "cleanup" : [
         "/include",
@@ -50,6 +48,8 @@
         "/bin/import",
         "/bin/libdeflate-gunzip",
         "/bin/libdeflate-gzip",
+        "/bin/libpng-config",
+        "/bin/libpng18-config",
         "/bin/magick",
         "/bin/magick-script",
         "/bin/mogrify",
@@ -59,6 +59,8 @@
         "/bin/openslide-quickhash1sum",
         "/bin/openslide-show-properties",
         "/bin/openslide-write-png",
+        "/bin/png-fix-itxt",
+        "/bin/pngfix",
         "/bin/slidetool",
         "/bin/smem",
         "/bin/snip",
@@ -101,8 +103,21 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ebiggers/libdeflate.git",
-                    "tag" : "v1.25",
-                    "commit" : "c8c56a20f8f621e6a966b716b31f1dedab6a41e3"
+                    "tag" : "v1.26",
+                    "commit" : "92e6a0db9fa848d742f9eb286c92afc60f2c3dda"
+                }
+            ]
+        },
+
+        {
+            "name" : "libpng",
+            "builddir" : true,
+            "buildsystem" : "autotools",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://github.com/pnggroup/libpng.git",
+                    "commit" : "964b4135949703b705fc760fc3fb546b86e5ab47"
                 }
             ]
         },
@@ -120,8 +135,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/aous72/OpenJPH.git",
-                    "tag" : "0.26.3",
-                    "commit" : "cb6592af91fc1332d5381288c1b885372926c447"
+                    "tag" : "0.31.0",
+                    "commit" : "c68064d0e4cad8e96bab9a068f6cc4e7799744fc"
                 }
             ]
         },
@@ -138,8 +153,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/lovell/libimagequant.git",
-                    "tag" : "v2.4.1",
-                    "commit" : "4e82d9492db228a7a2057c442f7a6eb40508a0eb"
+                    "commit" : "ce5fdeb1ccd9db288950faa21fd09c42c0a59bbb"
                 }
             ]
         },
@@ -188,9 +202,9 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://poppler.freedesktop.org/poppler-26.03.0.tar.xz",
+                    "url" : "https://poppler.freedesktop.org/poppler-26.09.0.tar.xz",
 
-                    "sha256" : "8b3c5e2a9f2ab4c3ec5029f28af1b433c6b71f0d1e7b3997aa561cf1c0ca4ebe"
+                    "sha256" : "8059eadb6805340768f138c465b57f8164c92b4a0773c37ef031ea6c0d987b2e"
                 }
             ]
         },
@@ -208,8 +222,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/AcademySoftwareFoundation/Imath.git",
-                    "tag" : "v3.2.2",
-                    "commit" : "1e480d11cb98b032a2dece9b9a8730512effc7f6"
+                    "tag" : "v3.2.3",
+                    "commit" : "5f27ba266d3ea1565e912570c30b5eafc89959f1"
                 }
             ]
         },
@@ -227,8 +241,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/AcademySoftwareFoundation/openexr.git",
-                    "tag" : "v3.4.8",
-                    "commit" : "adbd2a588b47b1f6d02557571d8e36a91084da8a"
+                    "tag" : "v3.4.15",
+                    "commit" : "e71cdd5d30a146dcb56c5e4c576d9e9d3c45f4fb"
                 }
             ]
         },
@@ -258,7 +272,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/google/libultrahdr.git",
-                    "commit" : "8cbc983d2f6c2171af5cbcdb8801102f83fe92ab"
+                    "commit" : "e5f5a022fe96fc4dc2ee35c19f733a50df807abe"
                 }
             ]
         },
@@ -273,7 +287,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/troydhanson/uthash.git",
-                    "commit" : "6d8573997c21f24c7e4ec9e48734b44f384170a1"
+                    "commit" : "a49bed0b4abb7dff16c73906dcdc8a9718d582d2"
                 }
             ]
         },
@@ -322,8 +336,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/HEASARC/cfitsio.git",
-                    "tag" : "cfitsio-4.6.3",
-                    "commit" : "386e719ccc5e30ca497ec2df57c4ef1de5adbc3f"
+                    "tag" : "cfitsio-4.7.0",
+                    "commit" : "d6d27653740864a0483e74cff23c53e34e1dceee"
                 }
             ]
         },
@@ -340,8 +354,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/dloebl/cgif.git",
-                    "tag" : "v0.5.2",
-                    "commit" : "48d28fe9f8c3a344b688bb10274447b6bb1bf0c2"
+                    "tag" : "v0.5.4",
+                    "commit" : "2dfb49c22fbe3894e46731f7e3b6ffa84311e44e"
                 }
             ]
         },
@@ -360,8 +374,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://www.libraw.org/data/LibRaw-0.22.1.tar.gz",
-                    "sha256" : "a789dc4e2409e2901d93793a4e0b80c7b49d0d97cf6ad71c850eb7616acfd786"
+                    "url" : "https://www.libraw.org/data/LibRaw-0.22.2.tar.gz",
+                    "sha256" : "de86b035655accff8d4010f1a221fdf50d353cb7b1422ba26f14a0db92612cfa"
                 }
             ]
         },
@@ -374,8 +388,8 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/ImageMagick/ImageMagick",
-                    "tag" : "7.1.2-18",
-                    "commit" : "d4e4b2b35a573fb7d96bc64ff1a417415bbe0f4c"
+                    "tag" : "7.1.2-31",
+                    "commit" : "fb965f1b54a65ddb633f8c2eac4452c782c66d7f"
                 }
             ]
         },
@@ -386,17 +400,17 @@
             "buildsystem" : "meson",
             "config-opts" : [
                 "--libdir=lib",
+                "-Ddeprecated=false",
                 "-Dmodules=disabled"
             ],
             "sources" : [
                 {
                     "type" : "git",
                     "url" : "https://github.com/libvips/libvips.git",
-                    "commit" : "78d0831539ae8902082331f8f6265733715cc842"
+                    "commit" : "bb5b1b63c96a699414157dd20ec933af16d7e6a5"
                 }
             ]
         },
-
 
         {
             "name" : "vipsdisp",
@@ -409,8 +423,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/jcupitt/vipsdisp.git",
-                    "tag" : "v4.1.4",
-                    "commit" : "e679774ca4308dbe6b0642033c3c1c1872a2afda"
+                    "commit" : "2648c7696059530924ac3496febcb51ba84fd6cc"
                 }
             ]
         }
