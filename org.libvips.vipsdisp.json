@@ -11,7 +11,9 @@
         "--socket=wayland",
         "--talk-name=org.gtk.vfs.*",
         "--filesystem=xdg-run/gvfsd",
-        "--filesystem=host"
+        "--filesystem=home",
+        "--filesystem=/mnt",
+        "--filesystem=/srv"
     ],
     "cleanup" : [
         "/include",
